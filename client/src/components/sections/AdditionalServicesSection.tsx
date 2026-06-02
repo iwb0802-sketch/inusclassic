@@ -14,7 +14,7 @@ export default function AdditionalServicesSection() {
       icon: UserRound,
       label: "결혼식사회",
       desc: "전문 사회자",
-      href: "https://inusmusic.kr/",
+      href: "https://www.inusmc.co.kr/",
     },
     {
       icon: Music2,

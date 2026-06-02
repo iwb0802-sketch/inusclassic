@@ -8,7 +8,7 @@ import { useState, useEffect, useCallback, useRef } from "react";
 import { ChevronDown } from "lucide-react";
 
 const serviceDropdownItems = [
-  { label: "결혼식사회", href: "https://inusmusic.kr/" },
+  { label: "결혼식사회", href: "https://www.inusmc.co.kr/" },
   { label: "재즈연주", href: "https://inusjazz.kr/" },
   { label: "축가", href: "https://inusmusic.kr/" },
   { label: "뮤지컬웨딩", href: "https://inusmw.kr/" },
