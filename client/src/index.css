@@ -222,3 +222,15 @@ html {
 .animate-menu-glow {
   animation: menu-glow 1.3s ease-in-out 3;
 }
+
+/* Popup fadeInUp animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

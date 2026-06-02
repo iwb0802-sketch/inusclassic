@@ -1,25 +1,32 @@
 /**
  * Design: Light section - 추가 옵션 서비스
- * 수정: 모바일 세로 리스트 (홀수 비어보이지 않게) + 클릭시 전체 보이게 토글
+ * 수정: 중창팝페라 제거 → 모바일청첩장 추가
+ * 순서: 결혼식사회, 재즈연주, 축가, 뮤지컬웨딩, 모바일청첩장, 완성패키지
  */
 import { useState } from "react";
-import { Music2, Mic, Theater, UserRound, MicVocal, ChevronDown, Sparkles, Package } from "lucide-react";
+import { Music2, Mic, Theater, UserRound, Smartphone, ChevronDown, Sparkles, Package } from "lucide-react";
 
 export default function AdditionalServicesSection() {
   const [isOpen, setIsOpen] = useState(false);
 
   const services = [
     {
+      icon: UserRound,
+      label: "결혼식사회",
+      desc: "전문 사회자",
+      href: "https://inusmusic.kr/",
+    },
+    {
       icon: Music2,
-      label: "재즈",
+      label: "재즈연주",
       desc: "재즈 연주 상품",
       href: "https://inusjazz.kr/",
     },
     {
       icon: Mic,
-      label: "중창팝페라",
-      desc: "중창팝페라 공연",
-      href: "https://blog.naver.com/inusmusics/220622621535",
+      label: "축가",
+      desc: "축가 서비스",
+      href: "https://inusmusic.kr/",
     },
     {
       icon: Theater,
@@ -28,16 +35,10 @@ export default function AdditionalServicesSection() {
       href: "https://inusmw.kr/",
     },
     {
-      icon: UserRound,
-      label: "사회",
-      desc: "전문 사회자",
-      href: "https://inusmc.co.kr/",
-    },
-    {
-      icon: MicVocal,
-      label: "축가",
-      desc: "축가 서비스",
-      href: "https://inusmusic.kr/",
+      icon: Smartphone,
+      label: "모바일청첩장",
+      desc: "모바일 청첩장 제작",
+      href: "https://inuscard.com",
     },
     {
       icon: Package,
@@ -97,14 +98,14 @@ export default function AdditionalServicesSection() {
                 <div className="w-12 h-12 rounded-full border border-[#c9a96e]/30 flex items-center justify-center bg-[#c9a96e]/5 group-hover:bg-[#c9a96e]/15 transition-colors duration-300">
                   <svc.icon className="w-5 h-5 text-[#c9a96e]" strokeWidth={1.5} />
                 </div>
-                <span className="text-[#2c1810] text-sm font-medium group-hover:text-[#c9a96e] transition-colors duration-300">
+                <span className="text-[#2c1810] text-sm font-medium group-hover:text-[#c9a96e] transition-colors duration-300 text-center">
                   {svc.label}
                 </span>
               </a>
             ))}
           </div>
 
-          {/* Mobile: Vertical list (깔끔한 세로 리스트) */}
+          {/* Mobile: Vertical list */}
           <div className="md:hidden space-y-0">
             {services.map((svc, i) => (
               <a

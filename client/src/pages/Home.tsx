@@ -42,6 +42,7 @@ import AdditionalServicesSection from "@/components/sections/AdditionalServicesS
 import Footer from "@/components/sections/Footer";
 import FloatingButtons from "@/components/FloatingButtons";
 import NavigationMenu from "@/components/NavigationMenu";
+import InusCardPopup from "@/components/InusCardPopup";
 
 export default function Home() {
   const containerRef = useScrollAnimation();
@@ -49,6 +50,7 @@ export default function Home() {
   return (
     <div ref={containerRef} className="min-h-screen overflow-x-hidden">
       <NavigationMenu />
+      <InusCardPopup />
       <HeroSection />
       <TrustSection />
       <StrengthsSection />
