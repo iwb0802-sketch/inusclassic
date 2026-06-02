@@ -7,7 +7,7 @@ export default function ProfileSection() {
     nameKr: "민향혜",
     nameEn: "Min, Hyang-Hye",
     role: "클래식팀장",
-    image: "/manus-storage/min-hyanghye_e41ea57d.jpg",
+    image: "/images/min-hyanghye.jpg",
     credentials: [
       "반주학과 재학 예능음악신문사 전국음악콩쿨 최우수상",
       "GML 음악콩쿨 최우수상 등",
@@ -30,7 +30,7 @@ export default function ProfileSection() {
       nameEn: "Kang, Da-Yeon",
       instrument: "Cello",
       instrumentKr: "첼로 연주자",
-      image: "/manus-storage/kang-dayeon_31e5d225.jpg",
+      image: "/images/kang-dayeon.jpg",
       credentials: [
         "국민대 대학원 석사 졸업",
         "예전예술기획 콩쿠르 입상",
@@ -48,7 +48,7 @@ export default function ProfileSection() {
       nameEn: "Kim, Seul-Ji",
       instrument: "Piano",
       instrumentKr: "피아노 연주자",
-      image: "/manus-storage/kim-seulji_b912a27e.jpg",
+      image: "/images/kim-seulji.jpg",
       credentials: [
         "숙명여대 졸업",
         "예전예술기획 콩쿠르 입상",
@@ -65,7 +65,7 @@ export default function ProfileSection() {
       nameEn: "Lee, Yeon-Ji",
       instrument: "Violin",
       instrumentKr: "바이올린 연주자",
-      image: "/manus-storage/lee-yeonji_646f0f13.jpg",
+      image: "/images/lee-yeonji.jpg",
       credentials: [
         "선화예고 졸업",
         "숙명여대 졸업",

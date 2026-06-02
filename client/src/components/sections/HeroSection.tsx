@@ -18,7 +18,7 @@ export default function HeroSection() {
       {/* Background Image - 모바일/데스크탑 모두 cover로 전체 채움 */}
       <div className="absolute inset-0">
         <img
-          src="/manus-storage/hero-classical-wedding_3781660f.webp"
+          src="/images/hero-classical-wedding.webp"
           alt="Luxury wedding hall with classical instruments"
           className="w-full h-full object-cover object-center"
         />

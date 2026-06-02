@@ -7,12 +7,12 @@ import { ChevronLeft, ChevronRight, Star, ExternalLink } from "lucide-react";
 
 export default function ReviewSection() {
   const reviewImages = [
-    { src: "/manus-storage/review1_4f49d350.jpg", alt: "고객 후기 1" },
-    { src: "/manus-storage/review2_e53d3369.jpg", alt: "고객 후기 2" },
-    { src: "/manus-storage/review3_300e10e4.jpg", alt: "고객 후기 3" },
-    { src: "/manus-storage/review4_f4f0c31f.jpg", alt: "고객 후기 4" },
-    { src: "/manus-storage/review5_eedebb00.jpg", alt: "고객 후기 5" },
-    { src: "/manus-storage/review6_d6cd630d.jpg", alt: "고객 후기 6" },
+    { src: "/images/review1.jpg", alt: "고객 후기 1" },
+    { src: "/images/review2.jpg", alt: "고객 후기 2" },
+    { src: "/images/review3.jpg", alt: "고객 후기 3" },
+    { src: "/images/review4.jpg", alt: "고객 후기 4" },
+    { src: "/images/review5.jpg", alt: "고객 후기 5" },
+    { src: "/images/review6.jpg", alt: "고객 후기 6" },
   ];
 
   const [current, setCurrent] = useState(0);

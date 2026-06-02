@@ -22,7 +22,7 @@ export default function IntroSection() {
           <div className="fade-in-up relative">
             <div className="relative overflow-hidden">
               <img
-                src="/manus-storage/violin-closeup_47bc4a2d.webp"
+                src="/images/violin-closeup.webp"
                 alt="Violin performance at wedding"
                 className="w-full h-[500px] object-cover"
               />
