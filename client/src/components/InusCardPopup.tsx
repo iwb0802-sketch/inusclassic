@@ -79,13 +79,14 @@ export default function InusCardPopup() {
 
       {/* 펼쳐진 내용 */}
       <div
-        className={`overflow-hidden transition-all duration-400 ease-out origin-top-left ${
-          expanded ? "max-h-[900px] opacity-100" : "max-h-0 opacity-0"
+        className={`overflow-y-auto transition-all duration-400 ease-out origin-top-left ${
+          expanded ? "opacity-100" : "max-h-0 opacity-0 pointer-events-none"
         }`}
+        style={{ maxHeight: expanded ? "calc(100vh - 140px)" : "0" }}
       >
         <div
           className="bg-white rounded-lg shadow-2xl overflow-hidden border border-[#e8e4df]"
-          style={{ width: "min(520px, calc(100vw - 2rem))" }}
+          style={{ width: "min(400px, calc(100vw - 2rem))" }}
         >
           {/* 팝업 이미지 */}
           <img
