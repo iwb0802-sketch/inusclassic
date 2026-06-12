@@ -95,8 +95,8 @@ export default function FloatingButtons() {
 
   return (
     <div
-      className={`fixed bottom-0 left-0 right-0 z-50 pointer-events-none transition-all duration-500 ${
-        visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+      className={`fixed bottom-0 left-0 right-0 z-50 transition-all duration-500 ${
+        visible ? "opacity-100 translate-y-0 pointer-events-none" : "opacity-0 translate-y-4 pointer-events-none"
       }`}
     >
       {/* 한 줄: 영상보기 | SNS 아이콘 | 카톡상담 - 가운데 정렬 */}
