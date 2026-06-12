@@ -43,11 +43,11 @@ export default function InusCardPopup() {
 
   return (
     <div
-      className="fixed top-20 left-4 sm:left-6 z-[100]"
+      className="fixed top-20 left-4 sm:left-6 z-[100] pointer-events-none"
       style={{ animation: "fadeInUp 0.4s cubic-bezier(0.23,1,0.32,1)" }}
     >
       {/* 미니 버튼 */}
-      <div className="flex items-center gap-2 mb-2">
+      <div className="flex items-center gap-2 mb-2 pointer-events-auto">
         <button
           onClick={() => setExpanded(!expanded)}
           className="flex items-center gap-2 pl-3 pr-2 py-2 rounded-full shadow-lg text-white text-xs font-medium tracking-wider transition-all duration-300 hover:shadow-xl active:scale-95"
@@ -79,7 +79,7 @@ export default function InusCardPopup() {
 
       {/* 펼쳐진 내용 */}
       <div
-        className={`overflow-y-auto transition-all duration-400 ease-out origin-top-left ${
+        className={`overflow-y-auto transition-all duration-400 ease-out origin-top-left pointer-events-auto ${
           expanded ? "opacity-100" : "max-h-0 opacity-0 pointer-events-none"
         }`}
         style={{ maxHeight: expanded ? "calc(100vh - 140px)" : "0" }}
