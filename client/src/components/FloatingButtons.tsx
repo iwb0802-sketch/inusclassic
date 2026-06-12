@@ -95,8 +95,8 @@ export default function FloatingButtons() {
 
   return (
     <div
-      className={`fixed bottom-0 left-0 right-0 z-50 transition-all duration-500 ${
-        visible ? "opacity-100 translate-y-0 pointer-events-none" : "opacity-0 translate-y-4 pointer-events-none"
+      className={`fixed bottom-0 left-0 right-0 z-50 transition-all duration-500 pointer-events-none ${
+        visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
       }`}
     >
       {/* 한 줄: 영상보기 | SNS 아이콘 | 카톡상담 - 가운데 정렬 */}
@@ -107,7 +107,7 @@ export default function FloatingButtons() {
           href="https://m.blog.naver.com/PostList.naver?blogId=inusmusics&categoryNo=20&proxyReferer=&noTrackingCode=true"
           target="_blank"
           rel="noopener noreferrer"
-          className="pointer-events-auto flex items-center gap-2 px-4 py-3 bg-[#2c1810]/90 backdrop-blur-sm border border-[#c9a96e]/30 text-[#f8f4ef] hover:bg-[#2c1810] hover:border-[#c9a96e]/60 transition-all duration-300 shadow-lg shadow-black/20 group shrink-0"
+          className={`${visible ? 'pointer-events-auto' : 'pointer-events-none'} flex items-center gap-2 px-4 py-3 bg-[#2c1810]/90 backdrop-blur-sm border border-[#c9a96e]/30 text-[#f8f4ef] hover:bg-[#2c1810] hover:border-[#c9a96e]/60 transition-all duration-300 shadow-lg shadow-black/20 group shrink-0`}
         >
           <Play className="w-4 h-4 text-[#c9a96e] group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
           <span className="text-xs tracking-wide" style={{ fontFamily: "'Noto Serif KR', serif" }}>
@@ -116,7 +116,7 @@ export default function FloatingButtons() {
         </a>
 
         {/* 가운데: SNS 아이콘 - 왼쪽 버튼과 동일 스타일 */}
-        <div className="pointer-events-auto flex items-center gap-0 bg-[#2c1810]/90 backdrop-blur-sm border border-[#c9a96e]/30 shadow-lg shadow-black/20 shrink-0">
+        <div className={`${visible ? 'pointer-events-auto' : 'pointer-events-none'} flex items-center gap-0 bg-[#2c1810]/90 backdrop-blur-sm border border-[#c9a96e]/30 shadow-lg shadow-black/20 shrink-0`}>
           {snsLinks.map((sns, i) => (
             <a
               key={sns.label}
@@ -141,7 +141,7 @@ export default function FloatingButtons() {
           href="https://pf.kakao.com/_wxovaM/chat"
           target="_blank"
           rel="noopener noreferrer"
-          className="pointer-events-auto flex items-center gap-2 px-4 py-3 bg-[#c9a96e] text-[#1a1207] hover:bg-[#d4b87a] transition-all duration-300 shadow-lg shadow-black/20 group shrink-0"
+          className={`${visible ? 'pointer-events-auto' : 'pointer-events-none'} flex items-center gap-2 px-4 py-3 bg-[#c9a96e] text-[#1a1207] hover:bg-[#d4b87a] transition-all duration-300 shadow-lg shadow-black/20 group shrink-0`}
         >
           <MessageCircle className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
           <span className="text-xs tracking-wide font-medium" style={{ fontFamily: "'Noto Serif KR', serif" }}>
