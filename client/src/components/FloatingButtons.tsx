@@ -86,7 +86,7 @@ export default function FloatingButtons() {
   useEffect(() => {
     const handleScroll = () => {
       const heroHeight = window.innerHeight;
-      setVisible(window.scrollY > heroHeight * 0.8);
+      setVisible(window.scrollY > heroHeight * 1.0);
     };
     window.addEventListener("scroll", handleScroll, { passive: true });
     handleScroll();
