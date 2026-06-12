@@ -44,9 +44,27 @@ const YoutubeIcon = () => (
   </svg>
 );
 
-// 인스타그램 아이콘 (이미지)
+// 인스타그램 아이콘 - 공식 그라데이션 SVG (배경 없음)
 const InstagramIcon = () => (
-  <img src="/images/instagram-logo.png" alt="Instagram" width="16" height="16" style={{ objectFit: "contain" }} />
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <radialGradient id="ig-grad1" cx="30%" cy="107%" r="150%">
+        <stop offset="0%" stopColor="#fdf497" />
+        <stop offset="5%" stopColor="#fdf497" />
+        <stop offset="45%" stopColor="#fd5949" />
+        <stop offset="60%" stopColor="#d6249f" />
+        <stop offset="90%" stopColor="#285AEB" />
+      </radialGradient>
+    </defs>
+    {/* 둥근 사각형 배경 */}
+    <rect x="2" y="2" width="20" height="20" rx="6" ry="6" fill="url(#ig-grad1)" />
+    {/* 카메라 아운라인 */}
+    <rect x="7" y="7" width="10" height="10" rx="3" ry="3" fill="none" stroke="white" strokeWidth="1.5" />
+    {/* 렬즈 원 */}
+    <circle cx="12" cy="12" r="2.5" fill="none" stroke="white" strokeWidth="1.5" />
+    {/* 플래시 점 */}
+    <circle cx="16.5" cy="7.5" r="0.8" fill="white" />
+  </svg>
 );
 
 const snsLinks = [
