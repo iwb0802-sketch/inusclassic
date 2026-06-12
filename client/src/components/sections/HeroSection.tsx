@@ -112,7 +112,7 @@ export default function HeroSection() {
       {/* Scroll Indicator */}
       <button
         onClick={scrollToNext}
-        className="absolute bottom-5 md:bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 md:gap-2 animate-bounce cursor-pointer bg-transparent border-none z-20"
+        className="absolute bottom-5 md:bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 md:gap-2 animate-bounce cursor-pointer bg-transparent border-none z-[200]"
       >
         <span className="text-[#c9a96e]/40 text-[9px] md:text-[10px] tracking-widest uppercase">Scroll</span>
         <ChevronDown className="w-3.5 md:w-4 h-3.5 md:h-4 text-[#c9a96e]/40" />
