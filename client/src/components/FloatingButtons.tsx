@@ -4,7 +4,7 @@
  * 히어로 섹션을 지나 스크롤하면 나타남
  */
 import { useState, useEffect } from "react";
-import { MessageCircle, Play } from "lucide-react";
+import { MessageCircle, Play, Globe } from "lucide-react";
 
 // 네이버 블로그 아이콘 (SVG) - 초록색 stroke 윤곽선
 const NaverBlogIcon = () => (
@@ -61,19 +61,22 @@ const InstagramIcon = () => (
 
 const snsLinks = [
   {
+    label: "홈페이지",
+    href: "http://inusmusic.com/",
+    icon: Globe,
+    isLucide: true,
+  },
+  {
     label: "인스타그램",
     href: "https://www.instagram.com/inusmusic/",
     icon: InstagramIcon,
-  },
-  {
-    label: "블로그",
-    href: "https://blog.naver.com/inusmusics",
-    icon: NaverBlogIcon,
+    isLucide: false,
   },
   {
     label: "유튜브",
     href: "https://www.youtube.com/channel/UC1zF6ZTCwMxzK9fEqI9ESLA",
     icon: YoutubeIcon,
+    isLucide: false,
   },
 ];
 
@@ -96,21 +99,22 @@ export default function FloatingButtons() {
         visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
       }`}
     >
-      {/* 한 줄: 영상보기 | SNS 아이콘 | 카톡상담 - 동일 높이·스타일 */}
-      <div className="flex justify-between items-stretch px-4 pb-6 gap-2">
+      {/* 한 줄: 영상보기 | SNS 아이콘 | 카톡상담 - 가운데 정렬 */}
+      <div className="flex justify-center items-stretch px-4 pb-6 gap-2">
 
-        {/* 왼쪽: 실황영상보기 */}
-        <a
-          href="https://blog.naver.com/PostThumbnailList.nhn?blogId=inusmusics&from=postList&categoryNo=20"
-          target="_blank"
-          rel="noopener noreferrer"
+        {/* 왼쪽: 실황영상보기 - 페이지 내 videos 섹션으로 스크롤 */}
+        <button
+          onClick={() => {
+            const el = document.getElementById("videos");
+            if (el) el.scrollIntoView({ behavior: "smooth" });
+          }}
           className="pointer-events-auto flex items-center gap-2 px-4 py-3 bg-[#2c1810]/90 backdrop-blur-sm border border-[#c9a96e]/30 text-[#f8f4ef] hover:bg-[#2c1810] hover:border-[#c9a96e]/60 transition-all duration-300 shadow-lg shadow-black/20 group shrink-0"
         >
           <Play className="w-4 h-4 text-[#c9a96e] group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
           <span className="text-xs tracking-wide" style={{ fontFamily: "'Noto Serif KR', serif" }}>
             실황영상보기
           </span>
-        </a>
+        </button>
 
         {/* 가운데: SNS 아이콘 - 왼쪽 버튼과 동일 스타일 */}
         <div className="pointer-events-auto flex items-center gap-0 bg-[#2c1810]/90 backdrop-blur-sm border border-[#c9a96e]/30 shadow-lg shadow-black/20 shrink-0">
@@ -125,7 +129,10 @@ export default function FloatingButtons() {
                 i < snsLinks.length - 1 ? "border-r border-[#c9a96e]/15" : ""
               }`}
             >
-              <sns.icon />
+              {sns.isLucide
+                ? <sns.icon className="w-[13px] h-[13px]" strokeWidth={1.5} />
+                : <sns.icon />
+              }
             </a>
           ))}
         </div>
