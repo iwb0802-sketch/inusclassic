@@ -26,24 +26,28 @@ const snsLinks = [
     href: "http://inusmusic.com/",
     icon: Globe,
     isSvgComponent: false,
+    border: undefined,
   },
   {
     label: "인스타그램",
     href: "https://www.instagram.com/inusmusic/",
     icon: InstagramIcon,
     isSvgComponent: true,
+    border: undefined,
   },
   {
     label: "블로그",
     href: "https://blog.naver.com/inusmusics",
     icon: NaverBlogIcon,
     isSvgComponent: true,
+    border: "1px solid rgba(0,200,100,0.55)",
   },
   {
     label: "유튜브",
     href: "https://www.youtube.com/channel/UC1zF6ZTCwMxzK9fEqI9ESLA",
     icon: Youtube,
     isSvgComponent: false,
+    border: "1px solid rgba(255,60,60,0.65)",
   },
 ];
 
@@ -84,8 +88,11 @@ export default function FloatingButtons() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={sns.label}
-              className="w-8 h-8 flex items-center justify-center text-[#c9a96e]/70 hover:text-[#c9a96e] transition-colors duration-300 hover:scale-110 active:scale-95"
-              style={{ transition: "color 0.2s, transform 0.15s" }}
+              className="w-8 h-8 flex items-center justify-center text-[#c9a96e]/70 hover:text-[#c9a96e] transition-colors duration-300 hover:scale-110 active:scale-95 rounded-sm"
+              style={{
+                transition: "color 0.2s, transform 0.15s",
+                border: sns.border,
+              }}
             >
               {sns.isSvgComponent ? (
                 <sns.icon />
