@@ -96,8 +96,8 @@ export default function FloatingButtons() {
         visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
       }`}
     >
-      {/* 한 줄: 영상보기 | SNS 아이콘 pill | 카톡상담 */}
-      <div className="flex justify-between items-end px-4 pb-6 gap-2">
+      {/* 한 줄: 영상보기 | SNS 아이콘 | 카톡상담 - 동일 높이·스타일 */}
+      <div className="flex justify-between items-stretch px-4 pb-6 gap-2">
 
         {/* 왼쪽: 실황영상보기 */}
         <a
@@ -112,24 +112,18 @@ export default function FloatingButtons() {
           </span>
         </a>
 
-        {/* 가운데: SNS 아이콘 pill */}
-        <div
-          className="pointer-events-auto flex items-center gap-1 px-3 py-3 shadow-lg shrink-0"
-          style={{
-            background: "rgba(15,20,25,0.88)",
-            backdropFilter: "blur(8px)",
-            border: "1px solid rgba(201,169,110,0.25)",
-          }}
-        >
-          {snsLinks.map((sns) => (
+        {/* 가운데: SNS 아이콘 - 왼쪽 버튼과 동일 스타일 */}
+        <div className="pointer-events-auto flex items-center gap-0 bg-[#2c1810]/90 backdrop-blur-sm border border-[#c9a96e]/30 shadow-lg shadow-black/20 shrink-0">
+          {snsLinks.map((sns, i) => (
             <a
               key={sns.label}
               href={sns.href}
               target="_blank"
               rel="noopener noreferrer"
               aria-label={sns.label}
-              className="w-7 h-7 flex items-center justify-center text-[#c9a96e]/70 hover:text-[#c9a96e] hover:scale-110 active:scale-95"
-              style={{ transition: "color 0.2s, transform 0.15s" }}
+              className={`flex items-center justify-center w-11 h-full text-[#c9a96e]/70 hover:text-[#c9a96e] hover:bg-[#2c1810] transition-all duration-200 active:scale-95 ${
+                i < snsLinks.length - 1 ? "border-r border-[#c9a96e]/15" : ""
+              }`}
             >
               <sns.icon />
             </a>
