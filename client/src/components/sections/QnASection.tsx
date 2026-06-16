@@ -42,7 +42,7 @@ export default function QnASection() {
   ];
 
   return (
-    <section className="section-dark py-20 md:py-28">
+    <section id="qna" className="section-dark py-20 md:py-28">
       <div className="container max-w-3xl mx-auto">
         <div className="fade-in-up text-center mb-16">
           <p className="text-[#c9a96e] tracking-[0.2em] text-xs uppercase mb-3">FAQ</p>

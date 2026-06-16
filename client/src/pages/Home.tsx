@@ -43,6 +43,7 @@ import Footer from "@/components/sections/Footer";
 import FloatingButtons from "@/components/FloatingButtons";
 import NavigationMenu from "@/components/NavigationMenu";
 import InusCardPopup from "@/components/InusCardPopup";
+import QuickNav from "@/components/QuickNav";
 
 export default function Home() {
   const containerRef = useScrollAnimation();
@@ -71,6 +72,7 @@ export default function Home() {
       <AdditionalServicesSection />
       <Footer />
       <FloatingButtons />
+      <QuickNav />
     </div>
   );
 }

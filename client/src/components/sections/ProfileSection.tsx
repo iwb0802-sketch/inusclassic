@@ -80,7 +80,7 @@ export default function ProfileSection() {
   ];
 
   return (
-    <section className="section-dark py-20 md:py-28">
+    <section id="profile" className="section-dark py-20 md:py-28">
       <div className="container">
         {/* Team Manager */}
         <div className="fade-in-up text-center mb-16">
