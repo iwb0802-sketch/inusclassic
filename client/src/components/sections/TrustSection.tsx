@@ -5,7 +5,7 @@
 export default function TrustSection() {
   const stats = [
     { number: "SINCE 2015", label: "10년 이상 축적된", sublabel: "웨딩 진행 경험" },
-    { number: "1,000+", label: "본식 후기", sublabel: "실제 고객이 남긴 신뢰의 기록" },
+    { number: "2,000+", label: "본식 후기", sublabel: "실제 고객이 남긴 신뢰의 기록" },
     { number: "40,000+", label: "쌍 이상 진행", sublabel: "오랜 시간 축적된 운영 노하우" },
   ];
 
