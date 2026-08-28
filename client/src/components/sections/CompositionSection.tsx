@@ -1,6 +1,6 @@
 /**
  * Design: Light section - 완성형 웨딩 패키지만 표시
- * 기본 구성 안내는 CompositionGuideSection으로 분리됨
+ * 기본 구성 안내는 PricingSection으로 통합됨 (다이어트)
  */
 export default function CompositionSection() {
   return (

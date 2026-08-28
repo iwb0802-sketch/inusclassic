@@ -8,19 +8,13 @@ export default function ProfileSection() {
     nameEn: "Min, Hyang-Hye",
     role: "클래식팀장",
     image: "/images/min-hyanghye.jpg",
+    // 다이어트: credentials 10줄 -> 핵심 5줄 통합 압축
     credentials: [
-      "반주학과 재학 예능음악신문사 전국음악콩쿨 최우수상",
-      "GML 음악콩쿨 최우수상 등",
-      "다수 콩쿨 입상 Bel di music 상임반주자",
-      "라이징 음악학원출강",
-      "압구정 음악학원출강",
-    ],
-    activities: [
-      "제 8회 세종예술문화협회 콩쿠르 입상",
-      "제 7회 코리아나챔버오케스트라 협연",
-      "제 3회 J&R콩쿠르 입상",
-      "제 4회 바루에코라전국음악콩쿠르 입상",
-      "교원(실기)자격증 취득",
+      "반주학과 재학 · 예능음악신문사 전국음악콩쿨 최우수상",
+      "GML 음악콩쿨 최우수상 외 다수 콩쿨 입상",
+      "Bel di music 상임반주자",
+      "코리아나챔버오케스트라 협연 · 세종예술문화협회 콩쿠르 입상",
+      "라이징 · 압구정 음악학원 출강 / 교원(실기)자격증",
     ],
   };
 
@@ -33,14 +27,9 @@ export default function ProfileSection() {
       image: "/images/kang-dayeon.jpg",
       credentials: [
         "국민대 대학원 석사 졸업",
-        "예전예술기획 콩쿠르 입상",
-        "금천교향악단 객원 역임",
-        "동탄 유소오케 강사 역임",
-      ],
-      activities: [
-        "도마령산촌 문화축제 연주",
-        "매원초/경인초/성남여중 출강 강사 역임",
+        "예전예술기획 콩쿠르 입상 · 금천교향악단 객원",
         "일본 Tokushima Bunri University 합동 연주",
+        "동탄 유소오케 · 매원초/경인초 출강 강사 역임",
       ],
     },
     {
@@ -51,13 +40,9 @@ export default function ProfileSection() {
       image: "/images/kim-seulji.jpg",
       credentials: [
         "숙명여대 졸업",
-        "예전예술기획 콩쿠르 입상",
-        "금천교향악단 객원 역임",
-      ],
-      activities: [
-        "도마령산촌 문화축제 연주",
-        "매원초/경인초/성남여중 출강 강사 역임",
+        "예전예술기획 콩쿠르 입상 · 금천교향악단 객원",
         "일본 Tokushima Bunri University 합동 연주",
+        "매원초/경인초/성남여중 출강 강사 역임",
       ],
     },
     {
@@ -67,23 +52,19 @@ export default function ProfileSection() {
       instrumentKr: "바이올린 연주자",
       image: "/images/lee-yeonji.jpg",
       credentials: [
-        "선화예고 졸업",
-        "숙명여대 졸업",
+        "선화예고 · 숙명여대 졸업",
         "비엔에스 메인 바이올린 5년 진행",
-      ],
-      activities: [
-        "제 8회 세종예술문화협회 콩쿠르 입상",
-        "제 7회 코리아나챔버오케스트라 협연",
-        "제 3회 J&R콩쿠르 입상",
+        "코리아나챔버오케스트라 협연",
+        "세종예술문화협회 · J&R 콩쿠르 입상",
       ],
     },
   ];
 
   return (
-    <section id="profile" className="section-dark py-20 md:py-28">
+    <section id="profile" className="section-dark py-16 md:py-20">
       <div className="container">
         {/* Team Manager */}
-        <div className="fade-in-up text-center mb-16">
+        <div className="fade-in-up text-center mb-10">
           <p className="text-[#c9a96e] tracking-[0.2em] text-xs uppercase mb-3">Classic Team Manager Profile</p>
           <h2
             className="text-2xl md:text-3xl text-[#f8f4ef] mb-4"
@@ -95,8 +76,8 @@ export default function ProfileSection() {
         </div>
 
         {/* Manager Card - compact with smaller circular photo */}
-        <div className="fade-in-up max-w-lg mx-auto mb-24">
-          <div className="border border-[#c9a96e]/15 p-8 text-center">
+        <div className="fade-in-up max-w-lg mx-auto mb-16">
+          <div className="border border-[#c9a96e]/15 p-7 text-center">
             {/* Circular Photo - small to preserve quality */}
             <div className="w-28 h-28 mx-auto mb-6 rounded-full overflow-hidden border-2 border-[#c9a96e]/30 shadow-lg shadow-[#c9a96e]/10">
               <img
@@ -121,16 +102,11 @@ export default function ProfileSection() {
               ))}
             </div>
 
-            <div className="text-left max-w-xs mx-auto border-t border-[#c9a96e]/10 pt-4 space-y-1.5">
-              {teamManager.activities.map((act, j) => (
-                <p key={j} className="text-[#f8f4ef]/40 text-xs">· {act}</p>
-              ))}
-            </div>
           </div>
         </div>
 
         {/* Performers */}
-        <div className="fade-in-up text-center mb-16">
+        <div className="fade-in-up text-center mb-10">
           <p className="text-[#c9a96e] tracking-[0.2em] text-xs uppercase mb-3">Classic Team Profile</p>
           <h2
             className="text-2xl md:text-3xl text-[#f8f4ef] mb-4"
@@ -145,7 +121,7 @@ export default function ProfileSection() {
           {profiles.map((profile, i) => (
             <div
               key={i}
-              className="fade-in-up border border-[#c9a96e]/15 overflow-hidden group hover:border-[#c9a96e]/40 transition-all duration-500 text-center p-8"
+              className="fade-in-up border border-[#c9a96e]/15 overflow-hidden group hover:border-[#c9a96e]/40 transition-all duration-500 text-center p-6"
               style={{ transitionDelay: `${i * 120}ms` }}
             >
               {/* Circular Photo - small to preserve quality */}
@@ -176,11 +152,6 @@ export default function ProfileSection() {
                 ))}
               </div>
 
-              <div className="text-left border-t border-[#c9a96e]/10 pt-4 space-y-1.5">
-                {profile.activities.map((act, j) => (
-                  <p key={j} className="text-[#f8f4ef]/40 text-xs">· {act}</p>
-                ))}
-              </div>
             </div>
           ))}
         </div>

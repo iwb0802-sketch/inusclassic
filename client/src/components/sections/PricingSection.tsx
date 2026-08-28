@@ -38,6 +38,33 @@ export default function PricingSection() {
           <div className="gold-divider w-16 mx-auto mt-6" />
         </div>
 
+        {/* 기본 구성 안내 - 기존 독립 섹션(483px)에서 흡수 */}
+        <div className="fade-in-up max-w-3xl mx-auto mb-14">
+          <p className="text-center text-[#f8f4ef]/40 text-xs tracking-wider uppercase mb-4">
+            Ensemble · 기본 구성 안내
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+            {[
+              { name: "Trio (3중주)", instruments: "피아노 + 바이올린 + 첼로" },
+              { name: "Quartet (4중주)", instruments: "피아노 + 바이올린2 + 첼로" },
+              { name: "Quintet (5중주)", instruments: "바이올린2 + 비올라 + 첼로 + 피아노" },
+            ].map((comp, i) => (
+              <div
+                key={i}
+                className="px-4 py-3 text-center border border-[#c9a96e]/15 hover:border-[#c9a96e]/40 transition-colors duration-300"
+              >
+                <p
+                  className="text-[#c9a96e] text-xs font-medium mb-1"
+                  style={{ fontFamily: "'Playfair Display', serif" }}
+                >
+                  {comp.name}
+                </p>
+                <p className="text-[#f8f4ef]/50 text-[11px] leading-tight">{comp.instruments}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
         {/* Main Pricing - 본식 연주 */}
         <div className="fade-in-up max-w-4xl mx-auto mb-20">
           <h3 className="text-center text-[#c9a96e] text-sm tracking-wider uppercase mb-10">본식 연주</h3>
