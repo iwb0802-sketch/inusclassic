@@ -75,9 +75,9 @@ export default function HeroSection() {
           className="text-[2rem] leading-snug md:text-6xl lg:text-7xl text-[#f8f4ef] mb-4 md:mb-6 md:leading-tight"
           style={{ fontFamily: "'Noto Serif KR', serif", fontWeight: 400, textShadow: '0 2px 12px rgba(0,0,0,0.5), 0 1px 3px rgba(0,0,0,0.3)' }}
         >
-          공간의 품격을 높이는<br />
+          클래식이 흐르면,<br />
           <span className="bg-gradient-to-r from-[#c9a96e] via-[#e8d5a3] to-[#c9a96e] bg-clip-text text-transparent">
-            웨딩 클래식 연주
+            공간의 격이 달라집니다
           </span>
         </h1>
 
