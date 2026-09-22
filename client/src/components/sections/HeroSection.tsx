@@ -72,7 +72,7 @@ export default function HeroSection() {
 
         {/* Main headline */}
         <h1
-          className="text-[2rem] leading-snug md:text-6xl lg:text-7xl text-[#f8f4ef] mb-4 md:mb-6 md:leading-tight"
+          className="text-[1.55rem] sm:text-[2rem] leading-snug md:text-6xl lg:text-7xl text-[#f8f4ef] mb-4 md:mb-6 md:leading-tight"
           style={{ fontFamily: "'Noto Serif KR', serif", fontWeight: 400, textShadow: '0 2px 12px rgba(0,0,0,0.5), 0 1px 3px rgba(0,0,0,0.3)' }}
         >
           클래식이 흐르면,<br />
