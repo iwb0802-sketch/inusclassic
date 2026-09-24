@@ -83,8 +83,8 @@ export default function HeroSection() {
 
         {/* Subtitle - 줄바꿈 지정 */}
         <p className="text-[#f8f4ef]/80 text-sm md:text-lg max-w-xl mb-8 md:mb-10 font-light leading-relaxed text-center" style={{ textShadow: '0 1px 8px rgba(0,0,0,0.4)' }}>
-          공간의 분위기를 섬세하게<br />
-          채우는 클래식 연주
+          연주자의 숨결까지,<br />
+          이너스뮤직이 그 공간을 완성합니다.
         </p>
 
         <div className="gold-divider w-16 md:w-20 mb-8 md:mb-10" />
