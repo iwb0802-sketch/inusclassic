@@ -8,11 +8,14 @@ import { useState, useEffect, useCallback, useRef } from "react";
 import { ChevronDown } from "lucide-react";
 
 const serviceDropdownItems = [
+  { label: "메인홈페이지", href: "https://www.inusmusic.com/" },
   { label: "결혼식사회", href: "https://www.inusmc.co.kr/" },
   { label: "재즈연주", href: "https://inusjazz.kr/" },
   { label: "축가", href: "https://inusmusic.kr/" },
   { label: "뮤지컬웨딩", href: "https://inusmw.kr/" },
   { label: "모바일청첩장", href: "https://inuscard.com" },
+  { label: "음원편집", href: "https://www.inusmusic.com/audio", isNew: true },
+  { label: "식전영상제작", href: "https://prewedding-video-renderer-production.up.railway.app/editor", isNew: true },
   { label: "완성패키지", href: "https://blog.naver.com/inusmusics/220652965646" },
 ];
 
@@ -203,7 +206,7 @@ export default function NavigationMenu() {
                     <div
                       className={`overflow-hidden transition-all duration-400 ease-out ${
                         serviceDropdownOpen
-                          ? "max-h-[400px] opacity-100"
+                          ? "max-h-[560px] opacity-100"
                           : "max-h-0 opacity-0"
                       }`}
                     >
@@ -227,13 +230,18 @@ export default function NavigationMenu() {
                             onClick={() => setIsOpen(false)}
                           >
                             <span
-                              className="text-[#f8f4ef]/60 text-sm tracking-[0.12em] group-hover:text-[#c9a96e] transition-colors duration-300"
+                              className="inline-flex items-center gap-1.5 text-[#f8f4ef]/60 text-sm tracking-[0.12em] group-hover:text-[#c9a96e] transition-colors duration-300"
                               style={{
                                 fontFamily: "'Noto Serif KR', serif",
                                 fontWeight: 300,
                               }}
                             >
                               {svc.label}
+                              {svc.isNew && (
+                                <span className="text-[9px] font-bold px-1.5 py-0.5 rounded-full bg-[#c9a96e] text-[#1a1207] leading-none tracking-normal" style={{ fontFamily: "sans-serif" }}>
+                                  NEW
+                                </span>
+                              )}
                             </span>
                           </a>
                         ))}
