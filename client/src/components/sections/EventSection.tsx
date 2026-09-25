@@ -2,14 +2,17 @@
  * Design: Light section with event cards
  * Based on screenshot #15
  */
-import { Gift, PenLine, Sparkles, Music2, Mic, Theater, UserRound, Smartphone, Package } from "lucide-react";
+import { Gift, PenLine, Sparkles, Music2, Mic, Theater, UserRound, Smartphone, Package, Home, AudioLines, Video } from "lucide-react";
 
 const services = [
+  { icon: Home, label: "메인홈페이지", href: "https://www.inusmusic.com/" },
   { icon: UserRound, label: "결혼식사회", href: "https://www.inusmc.co.kr/" },
   { icon: Music2, label: "재즈연주", href: "https://inusjazz.kr/" },
   { icon: Mic, label: "축가", href: "https://inusmusic.kr/" },
   { icon: Theater, label: "뮤지컬웨딩", href: "https://inusmw.kr/" },
   { icon: Smartphone, label: "모바일청첩장", href: "https://inuscard.com" },
+  { icon: AudioLines, label: "음원편집", href: "https://www.inusmusic.com/audio", isNew: true },
+  { icon: Video, label: "식전영상제작", href: "https://prewedding-video-renderer-production.up.railway.app/editor", isNew: true },
   { icon: Package, label: "완성패키지", href: "https://blog.naver.com/inusmusics/220652965646" },
 ];
 
@@ -100,15 +103,20 @@ export default function EventSection() {
           <p className="text-center text-[#2c1810]/50 text-xs tracking-wider uppercase mb-5">
             Additional Options · 추가 옵션 서비스
           </p>
-          <div className="grid grid-cols-3 md:grid-cols-6 gap-3">
+          <div className="grid grid-cols-3 md:grid-cols-9 gap-3">
             {services.map((svc, i) => (
               <a
                 key={i}
                 href={svc.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex flex-col items-center gap-2 py-4 bg-white border border-[#c9a96e]/15 hover:border-[#c9a96e]/50 hover:-translate-y-0.5 transition-all duration-300"
+                className="group relative flex flex-col items-center gap-2 py-4 bg-white border border-[#c9a96e]/15 hover:border-[#c9a96e]/50 hover:-translate-y-0.5 transition-all duration-300"
               >
+                {svc.isNew && (
+                  <span className="absolute top-1 right-1 text-[7px] font-bold px-1.5 py-0.5 rounded-full bg-[#c9a96e] text-white leading-none tracking-wide">
+                    NEW
+                  </span>
+                )}
                 <svc.icon className="w-4 h-4 text-[#c9a96e]" strokeWidth={1.5} />
                 <span className="text-[#2c1810]/80 text-[11px] group-hover:text-[#c9a96e] transition-colors duration-300 text-center leading-tight">
                   {svc.label}
