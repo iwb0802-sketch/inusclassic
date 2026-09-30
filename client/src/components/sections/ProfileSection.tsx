@@ -162,7 +162,7 @@ export default function ProfileSection() {
 
               <div className="text-left space-y-1.5 mb-4">
                 {profile.credentials.map((cred, j) => (
-                  <p key={j} className="text-[#f8f4ef]/60 text-xs">· {cred}</p>
+                  <p key={j} className="text-[#f8f4ef]/60 text-xs break-keep" style={{ wordBreak: "keep-all" }}>· {cred}</p>
                 ))}
               </div>
 
