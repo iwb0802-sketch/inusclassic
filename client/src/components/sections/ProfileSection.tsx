@@ -121,7 +121,7 @@ export default function ProfileSection() {
               className="text-[#c9a96e] text-lg md:text-xl font-semibold"
               style={{ fontFamily: "'Playfair Display', serif" }}
             >
-              50+
+              100+
             </span>
             <span className="text-[#f8f4ef]/70 text-xs md:text-sm tracking-wide">
               명의 검증된 클래식 연주자 보유
@@ -170,10 +170,10 @@ export default function ProfileSection() {
           ))}
         </div>
 
-        {/* 50인 이상 보유 안내 문장 */}
+        {/* 100인 이상 보유 안내 문장 */}
         <p className="fade-in-up text-center text-[#f8f4ef]/50 text-xs md:text-sm max-w-2xl mx-auto mt-8 leading-relaxed break-keep" style={{ wordBreak: "keep-all" }}>
           위 프로필은 이너스뮤직 클래식팀의 대표 연주자입니다. 첼로·바이올린·피아노·플룻 등 편성별로{" "}
-          <span className="text-[#c9a96e]">검증된 50인 이상의 연주자 풀</span>을 보유하고 있으며, 예식 인원과 편성 규모에 맞춰 최적의 연주자를 배정합니다.
+          <span className="text-[#c9a96e]">검증된 100인 이상의 연주자 풀</span>을 보유하고 있으며, 예식 인원과 편성 규모에 맞춰 최적의 연주자를 배정합니다.
         </p>
       </div>
     </section>
