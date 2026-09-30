@@ -109,10 +109,10 @@ export default function ProfileSection() {
         <div className="fade-in-up text-center mb-10">
           <p className="text-[#c9a96e] tracking-[0.2em] text-xs uppercase mb-3">Classic Team Profile</p>
           <h2
-            className="text-2xl md:text-3xl text-[#f8f4ef] mb-5"
-            style={{ fontFamily: "'Noto Serif KR', serif", fontWeight: 500 }}
+            className="text-2xl md:text-3xl text-[#f8f4ef] mb-5 break-keep"
+            style={{ fontFamily: "'Noto Serif KR', serif", fontWeight: 500, wordBreak: "keep-all" }}
           >
-            이너스뮤직 클래식 대표 연주자 라인업
+            이너스뮤직 클래식<br className="sm:hidden" /> 대표 연주자 라인업
           </h2>
 
           {/* 보유 연주자 규모 스탯 배지 */}
