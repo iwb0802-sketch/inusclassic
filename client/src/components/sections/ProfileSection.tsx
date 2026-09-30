@@ -109,12 +109,26 @@ export default function ProfileSection() {
         <div className="fade-in-up text-center mb-10">
           <p className="text-[#c9a96e] tracking-[0.2em] text-xs uppercase mb-3">Classic Team Profile</p>
           <h2
-            className="text-2xl md:text-3xl text-[#f8f4ef] mb-4"
+            className="text-2xl md:text-3xl text-[#f8f4ef] mb-5"
             style={{ fontFamily: "'Noto Serif KR', serif", fontWeight: 500 }}
           >
-            이너스뮤직 클래식 연주자
+            이너스뮤직 클래식 대표 연주자 라인업
           </h2>
-          <div className="gold-divider w-16 mx-auto" />
+
+          {/* 보유 연주자 규모 스탯 배지 */}
+          <div className="inline-flex items-center gap-2.5 px-5 py-2.5 border border-[#c9a96e]/25 rounded-full bg-[#c9a96e]/5 mb-2">
+            <span
+              className="text-[#c9a96e] text-lg md:text-xl font-semibold"
+              style={{ fontFamily: "'Playfair Display', serif" }}
+            >
+              50+
+            </span>
+            <span className="text-[#f8f4ef]/70 text-xs md:text-sm tracking-wide">
+              명의 검증된 클래식 연주자 보유
+            </span>
+          </div>
+
+          <div className="gold-divider w-16 mx-auto mt-4" />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
@@ -155,6 +169,12 @@ export default function ProfileSection() {
             </div>
           ))}
         </div>
+
+        {/* 50인 이상 보유 안내 문장 */}
+        <p className="fade-in-up text-center text-[#f8f4ef]/50 text-xs md:text-sm max-w-2xl mx-auto mt-8 leading-relaxed break-keep" style={{ wordBreak: "keep-all" }}>
+          위 프로필은 이너스뮤직 클래식팀의 대표 연주자입니다. 첼로·바이올린·피아노·플룻 등 편성별로{" "}
+          <span className="text-[#c9a96e]">검증된 50인 이상의 연주자 풀</span>을 보유하고 있으며, 예식 인원과 편성 규모에 맞춰 최적의 연주자를 배정합니다.
+        </p>
       </div>
     </section>
   );
