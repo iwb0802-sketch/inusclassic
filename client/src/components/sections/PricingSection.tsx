@@ -11,6 +11,22 @@ export default function PricingSection() {
     { name: "Quintet", desc: "5중주", price: "370,000", popular: false },
   ];
 
+  // 프리미엄 풀 편성 라인업 (오케스트라 에디션)
+  const orchestraEdition = [
+    {
+      sub: "Sextet · 6중주",
+      instruments: "피아노 + 바이올린2 + 비올라 + 첼로 + 플룻",
+      addedNote: "+ 플룻 추가",
+      price: "450,000",
+    },
+    {
+      sub: "Septet · 7중주",
+      instruments: "피아노 + 바이올린3 + 비올라 + 첼로 + 플룻",
+      addedNote: "+ 플룻, 바이올린 추가",
+      price: "520,000",
+    },
+  ];
+
   return (
     <section id="pricing" className="section-dark py-20 md:py-28">
       <div className="container">
@@ -131,6 +147,68 @@ export default function PricingSection() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+
+        {/* Orchestra Edition - 프리미엄 풀 편성 라인업 */}
+        <div className="fade-in-up max-w-4xl mx-auto mb-20" style={{ transitionDelay: "150ms" }}>
+          <div className="relative border border-[#c9a96e]/40 bg-gradient-to-b from-[#c9a96e]/[0.08] to-transparent p-6 md:p-10">
+            <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-[#c9a96e] text-[#0f1419] text-[10px] tracking-[0.2em] uppercase font-semibold whitespace-nowrap">
+              Premium
+            </div>
+
+            <div className="text-center mb-10 pt-3">
+              <p
+                className="text-[#c9a96e] text-xs tracking-[0.25em] uppercase mb-2"
+                style={{ fontFamily: "'Playfair Display', serif" }}
+              >
+                Premium Ensemble
+              </p>
+              <h3
+                className="text-[#f8f4ef] text-2xl md:text-3xl mb-3"
+                style={{ fontFamily: "'Playfair Display', serif", fontWeight: 600 }}
+              >
+                Orchestra Edition
+              </h3>
+              <p
+                className="text-[#f8f4ef]/50 text-xs md:text-sm break-keep"
+                style={{ wordBreak: "keep-all" }}
+              >
+                풍성한 선율을 완성하는<br className="sm:hidden" /> 이너스뮤직의 프리미엄 풀 편성
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+              {orchestraEdition.map((item, i) => (
+                <div
+                  key={i}
+                  className="border border-[#c9a96e]/25 bg-[#0f1419]/40 p-6 md:p-7 text-center hover:border-[#c9a96e]/60 transition-all duration-300"
+                >
+                  <p
+                    className="text-[#c9a96e] text-[11px] tracking-[0.2em] uppercase mb-1"
+                    style={{ fontFamily: "'Playfair Display', serif" }}
+                  >
+                    {item.sub}
+                  </p>
+                  <p
+                    className="text-[#f8f4ef] text-sm mb-4"
+                    style={{ fontFamily: "'Playfair Display', serif" }}
+                  >
+                    Orchestra Edition
+                  </p>
+                  <p className="text-[#f8f4ef]/60 text-xs mb-1 break-keep" style={{ wordBreak: "keep-all" }}>
+                    {item.instruments}
+                  </p>
+                  <p className="text-[#c9a96e]/70 text-[11px] mb-5 break-keep" style={{ wordBreak: "keep-all" }}>
+                    {item.addedNote}
+                  </p>
+                  <p className="text-[#c9a96e] text-2xl font-semibold" style={{ fontFamily: "'Playfair Display', serif" }}>
+                    {item.price}
+                  </p>
+                  <p className="text-[#f8f4ef]/40 text-[10px] mt-1">원</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 
