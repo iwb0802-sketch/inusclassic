@@ -53,7 +53,7 @@ export default function EventSection() {
               <div className="flex flex-wrap gap-2">
                 <span className="inline-flex items-center gap-1 px-3 py-1.5 bg-[#c9a96e]/10 border border-[#c9a96e]/20 text-[#c9a96e] text-xs font-medium">
                   <Sparkles className="w-3 h-3" />
-                  최대 2만원 할인
+                  2만원 할인
                 </span>
                 <span className="inline-flex items-center px-3 py-1.5 bg-[#c9a96e]/5 border border-[#c9a96e]/15 text-[#2c1810]/70 text-xs">
                   웨딩 준비 체크리스트 제공

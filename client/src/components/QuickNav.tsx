@@ -11,10 +11,10 @@ const navItems = [
   { label: "소개", id: "intro" },
   { label: "특징", id: "trust" },
   { label: "영상", id: "videos" },
+  { label: "후기", id: "reviews" },
+  { label: "요금", id: "pricing" },
   { label: "곡목록", id: "songlist" },
   { label: "아티스트", id: "profile" },
-  { label: "요금", id: "pricing" },
-  { label: "후기", id: "reviews" },
   { label: "Q&A", id: "qna" },
 ];
 

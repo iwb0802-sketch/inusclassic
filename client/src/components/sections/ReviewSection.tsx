@@ -46,6 +46,9 @@ export default function ReviewSection() {
           <p className="text-[#2c1810]/50 text-sm mt-2" style={{ fontFamily: "'Playfair Display', serif" }}>
             INUSMUSIC Classical Performance Archive
           </p>
+          <p className="text-[#2c1810]/60 text-sm mt-3 break-keep" style={{ wordBreak: "keep-all" }}>
+            이너스뮤직 누적 후기&nbsp;5,000+ 중 일부를 소개합니다
+          </p>
           <div className="gold-divider w-16 mx-auto mt-6" />
         </div>
 
@@ -65,6 +68,7 @@ export default function ReviewSection() {
                   <img
                     src={img.src}
                     alt={img.alt}
+                    loading={i === 0 ? "eager" : "lazy"}
                     className="w-full h-auto object-contain bg-white"
                   />
                 </div>
@@ -74,12 +78,14 @@ export default function ReviewSection() {
             {/* Navigation arrows */}
             <button
               onClick={prevSlide}
+              aria-label="이전 후기"
               className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/80 hover:bg-white border border-[#c9a96e]/20 flex items-center justify-center transition-all duration-200 shadow-sm"
             >
               <ChevronLeft className="w-5 h-5 text-[#2c1810]" />
             </button>
             <button
               onClick={nextSlide}
+              aria-label="다음 후기"
               className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/80 hover:bg-white border border-[#c9a96e]/20 flex items-center justify-center transition-all duration-200 shadow-sm"
             >
               <ChevronRight className="w-5 h-5 text-[#2c1810]" />
@@ -91,6 +97,7 @@ export default function ReviewSection() {
             {reviewImages.map((_, i) => (
               <button
                 key={i}
+                aria-label={`후기 ${i + 1}번`}
                 onClick={() => setCurrent(i)}
                 className={`w-2 h-2 rounded-full transition-all duration-300 ${
                   i === current ? "bg-[#c9a96e] w-6" : "bg-[#c9a96e]/25"

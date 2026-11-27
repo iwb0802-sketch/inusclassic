@@ -36,12 +36,13 @@ import FloatingButtons from "@/components/FloatingButtons";
 import NavigationMenu from "@/components/NavigationMenu";
 import InusCardPopup from "@/components/InusCardPopup";
 import QuickNav from "@/components/QuickNav";
+import ServiceCrossNav from "@/components/brand/ServiceCrossNav";
 
 export default function Home() {
   const containerRef = useScrollAnimation();
 
   return (
-    <div ref={containerRef} className="min-h-screen overflow-x-hidden">
+    <div ref={containerRef} className="svc-page min-h-screen overflow-x-hidden">
       <NavigationMenu />
       <InusCardPopup />
       <HeroSection />
@@ -52,12 +53,13 @@ export default function Home() {
       <VideoSection />
       <ReviewSection />
       <ProcessSection />
+      <PricingSection />
       <SongListSection />
       <ProfileSection />
-      <PricingSection />
       <CTASection />
       <QnASection />
       <EventSection />
+      <ServiceCrossNav current="classic" />
       <Footer />
       <FloatingButtons />
       <QuickNav />

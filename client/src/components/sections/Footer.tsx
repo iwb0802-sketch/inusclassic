@@ -16,6 +16,16 @@ export default function Footer() {
         </p>
         <div className="gold-divider w-12 mx-auto mb-6" />
 
+        <div className="flex items-center justify-center gap-4 text-xs md:text-sm mb-6">
+          <a href="https://pf.kakao.com/_wxovaM/chat" target="_blank" rel="noopener noreferrer" className="text-[#f8f4ef]/50 hover:text-[#c9a96e] transition-colors">
+            카카오톡 상담
+          </a>
+          <span className="text-[#f8f4ef]/15">|</span>
+          <a href="tel:02-423-2772" className="text-[#f8f4ef]/50 hover:text-[#c9a96e] transition-colors">
+            02-423-2772
+          </a>
+        </div>
+
         {/* 사업자 정보 */}
         <div className="text-[#f8f4ef]/40 text-xs leading-relaxed space-y-1 mb-6">
           <p>대표자: 신유진 | 사업자번호: 299-90-00178</p>
