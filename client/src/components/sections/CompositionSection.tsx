@@ -38,7 +38,7 @@ export default function CompositionSection() {
               가장 만족도가 높은 구성으로 추천드립니다
             </p>
             <a
-              href="https://blog.naver.com/inusmusics/220652965646"
+              href="https://www.inusmusic.com/package"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 mt-6 px-6 py-3 border border-[#c9a96e] text-[#c9a96e] hover:bg-[#c9a96e] hover:text-white transition-all duration-500 text-sm tracking-wider"
