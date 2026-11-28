@@ -13,8 +13,9 @@
  * 11. Pricing (요금 + 기본 구성 안내)
  * 12. CTA (Quick Menu 4개)
  * 13. QnA
- * 14. Event (특별이벤트 + 추가 옵션 서비스 흡수)
- * 15. Footer
+ * 14. Event (특별이벤트)
+ * 15. ServiceCrossNav (More from INUSMUSIC · 추가 서비스 통합)
+ * 16. Footer
  */
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import HeroSection from "@/components/sections/HeroSection";

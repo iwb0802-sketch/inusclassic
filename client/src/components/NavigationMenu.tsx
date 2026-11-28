@@ -23,7 +23,7 @@ const menuItems = [
   { label: "메인", target: "top" },
   { label: "소개", target: "intro" },
   { label: "영상", target: "videos" },
-  { label: "서비스", target: "additional-services", hasDropdown: true },
+  { label: "서비스", target: "more-services", hasDropdown: true },
   { label: "후기", target: "reviews" },
   { label: "견적", target: "pricing" },
 ];
